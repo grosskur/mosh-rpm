@@ -1,5 +1,5 @@
 Name:		mosh
-Version:	1.1.1
+Version:	1.2
 Release:	1%{?dist}
 Summary:	Mobile shell that supports roaming and intelligent local echo
 
@@ -11,7 +11,6 @@ Source0:	https://github.com/downloads/keithw/mosh/mosh-%{version}.tar.gz
 BuildRequires:	protobuf-compiler
 BuildRequires:	protobuf-devel
 BuildRequires:	libutempter-devel
-BuildRequires:	boost-devel
 BuildRequires:	zlib-devel
 BuildRequires:	ncurses-devel
 Requires:	openssh-clients
@@ -30,8 +29,9 @@ Mosh is a remote terminal application that supports:
 
 
 %build
+# Use upstream's more aggressive hardening instead of Fedora's defaults
 %configure --enable-compile-warnings=error
-make %{?_smp_mflags}
+make %{?_smp_mflags} CFLAGS="" CXXFLAGS=""
 
 
 %install
@@ -40,11 +40,18 @@ make install DESTDIR=$RPM_BUILD_ROOT
 
 %files
 %doc README.md COPYING ChangeLog
-%{_bindir}/*
-%{_mandir}/man1/*
+%{_bindir}/mosh
+%{_bindir}/mosh-client
+%{_bindir}/mosh-server
+%{_mandir}/man1/mosh.1.gz
+%{_mandir}/man1/mosh-client.1.gz
+%{_mandir}/man1/mosh-server.1.gz
 
 
 %changelog
+* Fri Apr 27 2012 Alexander Chernyakhovsky <achernya@mit.edu> - 1.2
+- Update to mosh 1.2.
+
 * Mon Mar 26 2012 Alexander Chernyakhovsky <achernya@mit.edu> - 1.1.1-1
 - Update to mosh 1.1.1.
 

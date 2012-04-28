@@ -50,7 +50,10 @@ make install DESTDIR=$RPM_BUILD_ROOT
 
 
 %changelog
-* Fri Apr 27 2012 Alexander Chernyakhovsky <achernya@mit.edu> - 1.2
+* Sat Apr 28 2012 Alexander Chernyakhovsky <achernya@mit.edu> - 1.2-2
+- Add -g and -O2 CFLAGS
+
+* Fri Apr 27 2012 Alexander Chernyakhovsky <achernya@mit.edu> - 1.2-1
 - Update to mosh 1.2.
 
 * Mon Mar 26 2012 Alexander Chernyakhovsky <achernya@mit.edu> - 1.1.1-1

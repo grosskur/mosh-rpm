@@ -1,6 +1,6 @@
 Name:		mosh
-Version:	1.2
-Release:	2%{?dist}
+Version:	1.2.2
+Release:	1%{?dist}
 Summary:	Mobile shell that supports roaming and intelligent local echo
 
 License:	GPLv3+
@@ -50,6 +50,9 @@ make install DESTDIR=$RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Jun 13 2012 Alexander Chernyakhovsky <achernya@mit.edu> - 1.2.2-1
+- Update to mosh 1.2.2
+
 * Sat Apr 28 2012 Alexander Chernyakhovsky <achernya@mit.edu> - 1.2-2
 - Add -g and -O2 CFLAGS
 

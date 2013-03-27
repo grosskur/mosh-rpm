@@ -1,6 +1,6 @@
 Name:		mosh
-Version:	1.2.3
-Release:	3%{?dist}
+Version:	1.2.4
+Release:	1%{?dist}
 Summary:	Mobile shell that supports roaming and intelligent local echo
 
 License:	GPLv3+
@@ -15,7 +15,6 @@ BuildRequires:	zlib-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	openssl-devel
 Requires:	openssh-clients
-Requires:	perl-IO-Tty
 Requires:	openssl
 
 %description
@@ -52,6 +51,9 @@ make install DESTDIR=$RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Mar 27 2013 Alexander Chernyakhovsky <achernya@mit.edu> - 1.2.4-1
+- Update to mosh 1.2.4
+
 * Sun Mar 10 2013 Alexander Chernyakhovsky <achernya@mit.edu> - 1.2.3-3
 - Rebuilt for Protobuf API change from 2.4.1 to 2.5.0
 

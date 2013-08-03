@@ -1,6 +1,6 @@
 Name:		mosh
 Version:	1.2.4
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	Mobile shell that supports roaming and intelligent local echo
 
 License:	GPLv3+
@@ -51,6 +51,9 @@ make install DESTDIR=$RPM_BUILD_ROOT
 
 
 %changelog
+* Sat Aug 03 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.2.4-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
+
 * Wed Jul 17 2013 Petr Pisar <ppisar@redhat.com> - 1.2.4-2
 - Perl 5.18 rebuild
 
